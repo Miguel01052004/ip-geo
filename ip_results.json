@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "8.8.8.8",
+    "pais": "United States",
+    "region": "Virginia",
+    "isp": "Google LLC",
+    "lat": 39.03,
+    "lon": -77.5
+  },
+  {
+    "ip": "1.1.1.1",
+    "pais": "Australia",
+    "region": "Queensland",
+    "isp": "Cloudflare, Inc",
+    "lat": -27.4766,
+    "lon": 153.0166
+  },
+  {
+    "ip": "8.8.4.4",
+    "pais": "United States",
+    "region": "Virginia",
+    "isp": "Google LLC",
+    "lat": 39.03,
+    "lon": -77.5
+  }
+]

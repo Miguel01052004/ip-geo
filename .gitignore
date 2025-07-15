@@ -1,0 +1,7 @@
+# Ignorar el entorno virtual
+venv/
+# Archivos temporales de editors / OS
+*.swp
+*.pyc
+__pycache__/
+.DS_Store
