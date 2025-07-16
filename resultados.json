@@ -1,0 +1,82 @@
+[
+    {
+        "IP": "1.1.1.1",
+        "Pa\u00eds": "Australia",
+        "Regi\u00f3n": "Queensland",
+        "ISP": "Cloudflare, Inc",
+        "Latitud": -27.4766,
+        "Longitud": 153.0166
+    },
+    {
+        "IP": "8.8.8.8",
+        "Pa\u00eds": "United States",
+        "Regi\u00f3n": "Virginia",
+        "ISP": "Google LLC",
+        "Latitud": 39.03,
+        "Longitud": -77.5
+    },
+    {
+        "IP": "8.8.4.4",
+        "Pa\u00eds": "United States",
+        "Regi\u00f3n": "Virginia",
+        "ISP": "Google LLC",
+        "Latitud": 39.03,
+        "Longitud": -77.5
+    },
+    {
+        "IP": "9.9.9.9",
+        "Pa\u00eds": "United States",
+        "Regi\u00f3n": "California",
+        "ISP": "Quad9",
+        "Latitud": 37.8767,
+        "Longitud": -122.2676
+    },
+    {
+        "IP": "208.67.222.222",
+        "Pa\u00eds": "United States",
+        "Regi\u00f3n": "California",
+        "ISP": "Cisco OpenDNS, LLC",
+        "Latitud": 37.7642,
+        "Longitud": -122.3993
+    },
+    {
+        "IP": "152.199.19.160",
+        "Pa\u00eds": "United States",
+        "Regi\u00f3n": "California",
+        "ISP": "Verizon Business",
+        "Latitud": 33.9751,
+        "Longitud": -118.426
+    },
+    {
+        "IP": "104.244.42.1",
+        "Pa\u00eds": "United States",
+        "Regi\u00f3n": "California",
+        "ISP": "Twitter Inc.",
+        "Latitud": 37.7766,
+        "Longitud": -122.417
+    },
+    {
+        "IP": "151.101.65.121",
+        "Pa\u00eds": "United States",
+        "Regi\u00f3n": "California",
+        "ISP": "Fastly, Inc.",
+        "Latitud": 37.7642,
+        "Longitud": -122.3993
+    },
+    {
+        "IP": "34.160.111.145",
+        "Pa\u00eds": "United States",
+        "Regi\u00f3n": "Missouri",
+        "ISP": "Google LLC",
+        "Latitud": 39.0997,
+        "Longitud": -94.5785
+    },
+    {
+        "IP": "20.81.111.85",
+        "Pa\u00eds": "United States",
+        "Regi\u00f3n": "Virginia",
+        "ISP": "Microsoft Corporation",
+        "Latitud": 36.677696,
+        "Longitud": -78.37471
+    }
+]

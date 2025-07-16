@@ -1,54 +1,34 @@
-import json, sys
-from pathlib import Path
 import requests
+import json
 
-API_URL = "http://ip-api.com/json/"
-OUT_FILE = Path("ip_results.json")
-
-def consultar_ip(ip: str) -> dict:
-    try:
-        r = requests.get(f"{API_URL}{ip}", timeout=5)
-        data = r.json()
-        if data["status"] != "success":
-            raise ValueError(data.get("message", "Error desconocido"))
+def consultar_ip(ip):
+    url = f"http://ip-api.com/json/{ip}"
+    respuesta = requests.get(url)
+    if respuesta.status_code == 200:
+        datos = respuesta.json()
         return {
-            "ip": data["query"],
-            "pais": data["country"],
-            "region": data["regionName"],
-            "isp": data["isp"],
-            "lat": data["lat"],
-            "lon": data["lon"],
+            "IP": ip,
+            "País": datos.get("country"),
+            "Región": datos.get("regionName"),
+            "ISP": datos.get("isp"),
+            "Latitud": datos.get("lat"),
+            "Longitud": datos.get("lon")
         }
-    except Exception as e:
-        print(f"❌  No se pudo consultar {ip}: {e}")
-        return {}
+    else:
+        return {"IP": ip, "Error": "No se pudo consultar"}
 
-def guardar(resultado: dict):
-    resultados = []
-    if OUT_FILE.exists():
-        try:
-            resultados = json.loads(OUT_FILE.read_text())
-        except json.JSONDecodeError:
-            pass
+resultados = []
+
+while True:
+    ip = input("Introduce una IP pública (o escribe 'exit' para salir): ")
+    if ip.lower() == "exit":
+        break
+    resultado = consultar_ip(ip)
+    print(resultado)
     resultados.append(resultado)
-    OUT_FILE.write_text(json.dumps(resultados, indent=2, ensure_ascii=False))
 
-def main():
-    print("Escribe una IP pública (o 'exit' para salir):")
-    while True:
-        ip = input(">> ").strip()
-        if ip.lower() == "exit":
-            print("Programa finalizado.")
-            break
-        if not ip:
-            continue
-        res = consultar_ip(ip)
-        if res:
-            print(f"🌎  {res['ip']:15}  {res['pais']}, {res['region']}  |  ISP: {res['isp']}  |  ({res['lat']}, {res['lon']})")
-            guardar(res)
+with open("resultados.json", "w") as archivo:
+    json.dump(resultados, archivo, indent=4)
 
-if __name__ == "__main__":
-    try:
-        main()
-    except KeyboardInterrupt:
-        sys.exit(0)
+print("Resultados guardados en resultados.json")
+
